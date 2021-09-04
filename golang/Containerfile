@@ -1,0 +1,10 @@
+FROM localhost/emacs-base
+
+RUN dnf in -y go
+
+ENV GOPATH=/home/emil/.go
+ENV PATH=$PATH:/home/emil/.go/bin
+
+RUN go get -u  github.com/rogpeppe/godef
+RUN GO111MODULE=on go get golang.org/x/tools/gopls@latest
+
