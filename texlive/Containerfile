@@ -1,0 +1,3 @@
+FROM localhost/emacs-base
+
+RUN zypper in -y texlive-full
