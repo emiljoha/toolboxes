@@ -1,5 +1,4 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=Emacs
 Exec=/usr/bin/toolbox --container base run emacs
 Icon=/var/home/emil/.local/share/applications/emacs.desktop.png
