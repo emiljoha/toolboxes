@@ -2,6 +2,6 @@
 Encoding=UTF-8
 Name=Emacs Python IDE
 Exec=/usr/bin/toolbox --container python run emacs
-Icon=/var/home/emil/.local/share/applications/emacs.desktop.png
+Icon=/var/home/emil/.local/share/applications/python-logo.svg
 Type=Application
 Categories=Development;
