@@ -4,4 +4,6 @@ RUN pip install rope jedi autopep8 yapf black flake8
 
 RUN dnf install -y flatpak-builder
 
-RUN echo "(load \"/var/home/emil/dev/emacs-config/python-specifics.el\")" >> /var/local/init.el
+COPY python-config.el /var/local/
+
+RUN echo "(load \"/var/local/python-config.el\")" >> /var/local/init.el
