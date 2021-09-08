@@ -2,8 +2,6 @@ FROM localhost/emacs-base
 
 RUN pip install rope jedi autopep8 yapf black flake8
 
-RUN dnf install -y flatpak-builder
-
 COPY python-config.el /var/local/
 
 RUN echo "(load \"/var/local/python-config.el\")" >> /var/local/init.el
