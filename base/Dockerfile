@@ -5,4 +5,5 @@ RUN dnf install -y git cmake emacs libtool libvterm-devel libvterm-tools fish cu
 COPY config.fish /var/local/fish/
 ENV XDG_CONFIG_HOME=/var/local
 
-RUN echo "(load \"/var/home/emil/dev/emacs-config/init.el\")" > /var/local/init.el
+COPY base-config.el /var/local/
+RUN echo "(load \"/var/local/base-config.el\")" > /var/local/init.el
