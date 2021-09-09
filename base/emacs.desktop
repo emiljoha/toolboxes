@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Emacs
-Exec=/usr/bin/toolbox --container base run emacs
+Exec=/usr/bin/toolbox --container base run emacs --load /var/local/init.el
 Icon=/var/home/emil/.local/share/applications/emacs.desktop.png
 Type=Application
 Categories=Development;
