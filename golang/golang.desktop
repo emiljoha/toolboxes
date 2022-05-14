@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=golang
+Exec=/usr/bin/toolbox --container golang run emacs --load /var/local/init.el
+Icon=/var/home/emil/.local/share/applications/emacs.desktop.png
+Type=Application
+Categories=Development;

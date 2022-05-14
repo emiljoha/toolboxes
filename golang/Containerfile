@@ -2,9 +2,11 @@ FROM localhost/emacs-base
 
 RUN dnf in -y go
 
-ENV GOPATH=/home/emil/.go
-ENV PATH=$PATH:/home/emil/.go/bin
+ENV GOPATH=/var/local/go
+ENV PATH=$PATH:/var/local/go/bin
 
-RUN go get -u  github.com/rogpeppe/godef
-RUN GO111MODULE=on go get golang.org/x/tools/gopls@latest
+RUN go install golang.org/x/tools/gopls@latest
+
+COPY golang-config.el /var/local/
+RUN echo "(load \"/var/local/golang-config.el\")" >> /var/local/init.el
 
