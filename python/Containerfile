@@ -1,6 +1,10 @@
 FROM localhost/emacs-base
 
-RUN pip install rope jedi autopep8 yapf black flake8
+RUN yum install python3-tkinter
+
+RUN pip install 'python-lsp-server[all]' \
+    pyls-flake8 pylsp-mypy pyls-isort python-lsp-black pyls-memestra pylsp-rope \
+    matplotlib
 
 COPY python-config.el /var/local/
 
