@@ -18,6 +18,7 @@
     (add-to-list 'package-archives
 		 '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
+(package-refresh-contents)
 
 ;;; USE-PACKAGE ;;;
 ;; To keep track of all those wonderfull elisp programs MELPA provides
@@ -87,3 +88,12 @@
 
 (setq ido-ignore-buffers '("\\` " my-ido-ignore-func))
 ;;; base-config.el ends here
+
+(use-package lsp-mode
+  :init
+  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+  (setq lsp-keymap-prefix "C-c l")
+  :hook (
+         ;; if you want which-key integration
+         (lsp-mode . lsp-enable-which-key-integration))
+  :commands lsp)
