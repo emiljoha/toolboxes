@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=Emacs Python IDE
-Exec=/usr/bin/toolbox --container python run emacs
-Icon=/var/home/emil/.local/share/applications/python-logo.svg
-Type=Application
-Categories=Development;
